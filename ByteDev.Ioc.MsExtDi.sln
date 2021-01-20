@@ -20,11 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{E4DE09AA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi", "src\ByteDev.Ioc.MsExtDi\ByteDev.Ioc.MsExtDi.csproj", "{E2BDEC7E-047A-4C36-9F3C-0937E0EFB037}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.IntTests", "test\ByteDev.Ioc.MsExtDi.IntTests\ByteDev.Ioc.MsExtDi.IntTests.csproj", "{4F112D8B-9589-4D9B-B6DA-B07E9ADBAAB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.IntTests", "tests\ByteDev.Ioc.MsExtDi.IntTests\ByteDev.Ioc.MsExtDi.IntTests.csproj", "{4F112D8B-9589-4D9B-B6DA-B07E9ADBAAB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.Testing", "test\ByteDev.Ioc.MsExtDi.Testing\ByteDev.Ioc.MsExtDi.Testing.csproj", "{26000451-4DDD-4DD6-8F88-DCC769928C49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.Testing", "tests\ByteDev.Ioc.MsExtDi.Testing\ByteDev.Ioc.MsExtDi.Testing.csproj", "{26000451-4DDD-4DD6-8F88-DCC769928C49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.UnitTests", "test\ByteDev.Ioc.MsExtDi.UnitTests\ByteDev.Ioc.MsExtDi.UnitTests.csproj", "{A3F6828C-C870-4412-80DD-6B2B86FDAC24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Ioc.MsExtDi.UnitTests", "tests\ByteDev.Ioc.MsExtDi.UnitTests\ByteDev.Ioc.MsExtDi.UnitTests.csproj", "{A3F6828C-C870-4412-80DD-6B2B86FDAC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
