@@ -10,7 +10,9 @@
     <description>Collection of extensions for Microsoft Extensions DI.</description>
     <copyright>Copyright 2019</copyright>
     <tags>ioc di dependency injection extensions msextdi</tags>
-    <iconUrl>https://raw.githubusercontent.com/bytedev/ByteDev.Ioc.MsExtDi/master/images/icon.png</iconUrl>
+    <projectUrl>https://github.com/ByteDev/ByteDev.Ioc.MsExtDi</projectUrl>
+    <icon>images\icon.png</icon>
+    <license type="file">LICENSE</license>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
         <dependency id="Microsoft.Extensions.Configuration" version="2.0.0" />
@@ -22,5 +24,7 @@
   <files>
     <file src="..\src\ByteDev.Ioc.MsExtDi\bin\Release\netstandard2.0\ByteDev.Ioc.MsExtDi.dll" target="lib\netstandard2.0" />
     <file src="..\src\ByteDev.Ioc.MsExtDi\bin\Release\netstandard2.0\ByteDev.Ioc.MsExtDi.xml" target="lib\netstandard2.0" />
+    <file src="..\images\icon.png" target="images\" />
+    <file src="..\LICENSE*" target="" />
   </files>
 </package>
