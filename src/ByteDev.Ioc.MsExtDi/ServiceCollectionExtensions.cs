@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using ByteDev.Ioc.MsExtDi.Configuration;
@@ -79,6 +80,45 @@ namespace ByteDev.Ioc.MsExtDi
             source.AddSingleton(s => s.GetService<IOptions<TSettings>>().Value);
 
             return source;
+        }
+
+        /// <summary>
+        /// Get configuration implementation. If no configuration can be found null will be returned.
+        /// If more than one configuration is found then an exception is thrown.
+        /// </summary>
+        /// <param name="source">Service collection to retrieve configuration from.</param>
+        /// <returns>ICollection implementation.</returns>
+        /// <exception cref="T:System.InvalidOperationException">Service collection contains more than one IConfiguration.</exception>
+        public static IConfiguration GetConfiguration(this IServiceCollection source)
+        {
+            if (source == null)
+                return null;
+
+            ServiceDescriptor descriptor;
+
+            try
+            {
+                descriptor = source.SingleOrDefault(p => p.ServiceType == typeof(IConfiguration));
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("Service collection contains more than one IConfiguration.", ex);
+            }
+
+            return descriptor.GetConfigurationInstance();
+        }
+
+        /// <summary>
+        /// Get all IConfiguration service descriptors.
+        /// </summary>
+        /// <param name="source">Service collection to retrieve configuration descriptors from.</param>
+        /// <returns>Collection of IConfiguration service descriptors.</returns>
+        public static IEnumerable<ServiceDescriptor> GetConfigurationDescriptors(this IServiceCollection source)
+        {
+            if (source == null)
+                return Enumerable.Empty<ServiceDescriptor>();
+
+            return source.Where(p => p.ServiceType == typeof(IConfiguration));
         }
     }
 }
